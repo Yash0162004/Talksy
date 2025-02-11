@@ -7,9 +7,13 @@ import messageRoutes from './routes/message.route.js'
 import cors from "cors"
 import { app, server } from './lib/socket.js';
 dotenv.config();
+<<<<<<< HEAD
 import path from "path";
+=======
+import path from 'path';
+>>>>>>> fa2d90f4b086ae27c9c824bc5076e8c7b4b516c1
 const PORT = process.env.PORT;
-const __dirname =path.resolve();
+const __dirname = path.resolve();
 // Add cookie-parser middleware to parse cookies
 app.use(cookieParser());
 
@@ -24,7 +28,7 @@ app.use(cors({
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 if(process.env.NODE_ENV==="production"){
-  app.use(express.static(patj.join(__dirname,"../frontend/dist")))
+  app.use(express.static(path.join(__dirname,"../frontend/dist")))
 app.get(("*",(req,res)=>{
   res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
 }))
