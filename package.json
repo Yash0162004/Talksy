@@ -13,5 +13,9 @@
   "dependencies": {
     "react-icons": "^5.4.0",
     "@react-icons/bs": "^1.5.0"
+  
+  "react-icons": "^4.0.0",  // or the version you're using
+  
+
   }
 }
