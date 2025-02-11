@@ -7,7 +7,7 @@ import messageRoutes from './routes/message.route.js'
 import cors from "cors"
 import { app, server } from './lib/socket.js';
 dotenv.config();
-import parth from "path";
+import path from "path";
 const PORT = process.env.PORT;
 const __dirname =path.resolve();
 // Add cookie-parser middleware to parse cookies
