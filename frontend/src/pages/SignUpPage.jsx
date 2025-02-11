@@ -1,10 +1,10 @@
+import React from 'react';
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare, User } from "lucide-react";
 import { Link } from "react-router-dom";
-
-import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
+import AuthImagePattern from "../components/AuthImagePattern";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -35,7 +35,7 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="min-h-screen grid lg:grid-cols-2">
+    <div className="h-screen grid lg:grid-cols-2">
       {/* left side */}
       <div className="flex flex-col justify-center items-center p-6 sm:p-12">
         <div className="w-full max-w-md space-y-8">
@@ -121,10 +121,10 @@ const SignUpPage = () => {
 
             <button type="submit" className="btn btn-primary w-full" disabled={isSigningUp}>
               {isSigningUp ? (
-                <>
+                <React.Fragment>
                   <Loader2 className="size-5 animate-spin" />
                   Loading...
-                </>
+                </React.Fragment>
               ) : (
                 "Create Account"
               )}
@@ -151,4 +151,5 @@ const SignUpPage = () => {
     </div>
   );
 };
+
 export default SignUpPage;

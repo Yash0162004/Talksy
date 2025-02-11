@@ -1,6 +1,8 @@
+import React from 'react';
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Camera, Mail, User } from "lucide-react";
+
 const ProfilePage = () => {
   const { authUser, isUpdatingProfile, updateProfile } = useAuthStore();
   const [selectedImg, setSelectedImg] = useState(null);
@@ -21,12 +23,12 @@ const ProfilePage = () => {
   };
 
   return (
-      <div className="h-screen container mx-auto px-4 pt-20 max-w-5xl">
+    <div className="h-screen container mx-auto px-4 pt-20 max-w-5xl">
       <div className="max-w-2xl mx-auto p-4 py-8">
-    <div className="bg-base-300 rounded-xl p-6 space-y-8">
-    <div className="text-center">
-      <h1 className="text-2xl font-semibold ">Profile</h1>
-         <p className="mt-2">Your profile information</p>
+        <div className="bg-base-300 rounded-xl p-6 space-y-8">
+          <div className="text-center">
+            <h1 className="text-2xl font-semibold ">Profile</h1>
+            <p className="mt-2">Your profile information</p>
           </div>
 
           {/* AVATAR SECTION START FROM HERE */}
@@ -40,8 +42,7 @@ const ProfilePage = () => {
               />
               <label
                 htmlFor="avatar-upload"
-                className={`
-                  absolute bottom-0 right-0 
+                className={`absolute bottom-0 right-0 
                   bg-base-content hover:scale-105
                   p-2 rounded-full cursor-pointer 
                   transition-all duration-200
@@ -100,4 +101,5 @@ const ProfilePage = () => {
     </div>
   );
 };
+
 export default ProfilePage;

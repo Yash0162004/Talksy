@@ -1,3 +1,4 @@
+import React from 'react';
 import { useRef, useState } from "react";
 import { useChatStore } from "../store/useChatStore";
 import { Image, Send, X } from "lucide-react";
@@ -17,10 +18,13 @@ const MessageInput = () => {
     }
 
     const reader = new FileReader();
-    reader.onloadend = () => {
-      setImagePreview(reader.result);
-    };
+
     reader.readAsDataURL(file);
+
+    reader.onload = async () => {
+      const base64Image = reader.result;
+      setImagePreview(base64Image);
+    };
   };
 
   const removeImage = () => {
@@ -73,7 +77,7 @@ const MessageInput = () => {
         <div className="flex-1 flex gap-2">
           <input
             type="text"
-            className="w-full input input-bordered rounded-lg input-sm sm:input-md"
+            className={`input input-bordered w-full pl-10`}
             placeholder="Type a message..."
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -106,4 +110,5 @@ const MessageInput = () => {
     </div>
   );
 };
+
 export default MessageInput;

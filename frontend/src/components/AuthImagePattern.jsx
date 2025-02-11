@@ -1,3 +1,5 @@
+import React from 'react';
+
 const AuthImagePattern = ({ title, subtitle }) => {
   return (
     <div className="lg:flex items-center justify-center bg-base-200 p-12 mt-16">
