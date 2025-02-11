@@ -7,11 +7,7 @@ import messageRoutes from './routes/message.route.js'
 import cors from "cors"
 import { app, server } from './lib/socket.js';
 dotenv.config();
-<<<<<<< HEAD
-import path from "path";
-=======
 import path from 'path';
->>>>>>> fa2d90f4b086ae27c9c824bc5076e8c7b4b516c1
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
 // Add cookie-parser middleware to parse cookies
@@ -24,6 +20,7 @@ app.use(cors({
   credentials: true,
 }));
 
+
 // Use auth routes
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
@@ -32,6 +29,8 @@ if(process.env.NODE_ENV==="production"){
 app.get(("*",(req,res)=>{
   res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
 }))
+
+
 }
 server.listen(PORT, () => {
   console.log('Server is running on port:' + PORT);
