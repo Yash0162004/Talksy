@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaIconName } from 'react-icons/fa';
+
 const NoChatSelected = () => {
   return (
     <div className="w-full flex flex-1 flex-col items-center justify-center p-16 bg-base-100/50">

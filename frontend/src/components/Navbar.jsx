@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import { LogOut, Settings, User } from "lucide-react";
 import { FaIconName } from 'react-icons/fa';
+
+
 const Navbar = () => {
   const { logout, authUser  } = useAuthStore();
 
