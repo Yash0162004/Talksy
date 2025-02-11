@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useAuthStore } from "../store/useAuthStore";
 import { LogOut, Settings, User } from "lucide-react";
-import { BsChatLeftText } from '@react-icons/bs';
+import { BsIconName } from '@react-icons/bs';
 
 const Navbar = () => {
   const { logout, authUser  } = useAuthStore();
