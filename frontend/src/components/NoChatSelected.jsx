@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBeer } from 'react-icons/fa'; // Example of a valid icon
+import { MessageSquare } from 'lucide-react';
 
 const NoChatSelected = () => {
   return (
@@ -8,7 +8,7 @@ const NoChatSelected = () => {
         {/* Icon Display */}
         <div className="flex justify-center mb-4">
           <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center animate-bounce">
-            <FaBeer className="w-5 h-5 text-primary" />
+            <MessageSquare className="w-5 h-5 text-primary" />
           </div>
         </div>
 
